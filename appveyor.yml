@@ -34,7 +34,8 @@ install:
       &'7z' -bb3 x 'deps.zip'
       Set-Location $env:appveyor_build_folder
     }
-    git submodule update
+    git submodule update;
+    
     nuget restore desktop/Bililive_dm_VR/Bililive_dm_VR.sln
 configuration: Release
 build:
