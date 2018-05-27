@@ -36,7 +36,6 @@ install:
     }
     git submodule update
     nuget restore desktop/Bililive_dm_VR/Bililive_dm_VR.sln
-
 configuration: Release
 build:
   project: desktop/Bililive_dm_VR/Bililive_dm_VR.sln
