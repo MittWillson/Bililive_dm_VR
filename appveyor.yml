@@ -35,15 +35,11 @@ install:
       Set-Location $env:appveyor_build_folder
     }
     git submodule update
-    nuget restore GitHub.Unity.sln
-assembly_info:
-  patch: false
-  file: common\SolutionInfo.cs
-  assembly_informational_version: "{version}"
+    nuget restore desktop/Bililive_dm_VR/Bililive_dm_VR.sln
 
 configuration: Release
 build:
-  project: GitHub.Unity.sln
+  project: desktop/Bililive_dm_VR/Bililive_dm_VR.sln
   verbosity: minimal
 test:
   assemblies:
